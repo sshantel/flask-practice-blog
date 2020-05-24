@@ -8,9 +8,9 @@ def home():
 
 @app.route('/blog')
 def blog():
-    posts = [{'title' : 'Cooking Ramen', 'author': 'Chantel'}
+    posts = [{'title': 'Cooking Ramen', 'author': 'Chantel'},
              {'title': 'Buying Sushi', 'author': 'Chantel'}]
-    return render_template('blog.html', author="Chantel", cooking=False)
+    return render_template('blog.html', author="Chantel", cooking=False, posts=posts)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
