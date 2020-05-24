@@ -8,6 +8,8 @@ def home():
 
 @app.route('/blog')
 def blog():
+    posts = [{'title' : 'Cooking Ramen', 'author': 'Chantel'}
+             {'title': 'Buying Sushi', 'author': 'Chantel'}]
     return render_template('blog.html', author="Chantel", cooking=False)
 
 if __name__ == '__main__':
